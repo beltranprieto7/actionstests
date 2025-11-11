@@ -1,1 +1,14 @@
 name: Enviar un saludo desde GitHub Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar saludo
+        run: echo "¡Hola crayola!"
+
+      - name: Mostrar ubicación actual del runner
+        run: pwd
